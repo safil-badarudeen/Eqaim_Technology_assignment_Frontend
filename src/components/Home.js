@@ -101,7 +101,7 @@ function Home() {
                   Not Allowed...
                 </span>
               </p>
-              <button  onClick={() => setError(false)} className="ml-[250px] mt-[20px] text-[20px] border-2 border-emerald-600 rounded-md px-5 py-1 hover:bg-emerald-400 hover:scale-105">OK</button>
+              <button  onClick={() => setError(false)} className="ml-[250px] mt-[30px] text-[20px] border-2 border-emerald-600 bg-emerald-200 animate-pulse rounded-md px-5 py-1 hover:bg-emerald-400 hover:scale-105 transition duration-300">OK</button>
             </div>
           ) : (
             <div className="bg-black/80 h-[400px] my-6 min-w-[700px] overflow-y-auto scrollbar-y-auto rounded-sm mx-3">
