@@ -79,7 +79,7 @@ function Home() {
         {/* response */}
 
         <div className="border-2 border-dotted flex border-transparent rounded-sm mx-[400px] h-fit mt-1 bg-slate-200">
-          <div className="bg-black/80 h-[400px] my-6 overflow-y-auto scrollbar-y-auto rounded-sm mx-3">
+          <div className="bg-black/80 h-[400px] my-6 min-w-[700px] overflow-y-auto scrollbar-y-auto rounded-sm mx-3">
             
             <p className="text-[27px] m-10 text-white">{JSON.stringify(result, null, 2)}</p>
             
