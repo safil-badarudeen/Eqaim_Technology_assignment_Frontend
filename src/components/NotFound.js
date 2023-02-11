@@ -1,6 +1,8 @@
 
 
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function NotFound() {
   return (
@@ -14,7 +16,11 @@ function NotFound() {
                                 doorway to the great nothing
                             </h1>
                             <p class="my-2 text-gray-800">Sorry about that! Please visit our hompage to get where you need to go.</p>
+                           <Link to="/" />
+                           
                             <button class="sm:w-full lg:w-auto my-2 border rounded md py-4 px-8 text-center bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50">Take me Home</button>
+                            
+                          <Link/>
                         </div>
                     </div>
                     <div>

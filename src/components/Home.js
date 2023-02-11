@@ -4,8 +4,8 @@ import React, { useState } from "react";
 function Home() {
   const [firstNumber, setFirstNumber] = useState("");
   const [secondNumber, setSecondNumber] = useState("");
-  const [result,setResult] =useState()
-
+  const [result, setResult] = useState();
+  const [error, setError] = useState(false);
   const handleClear = () => {
     setFirstNumber("");
     setSecondNumber("");
@@ -15,9 +15,9 @@ function Home() {
     try {
       e.preventDefault();
       if (firstNumber === "" || secondNumber === "") {
-        console.log("enter 2 numbers");
+        setError(true);
       } else if (/^-\d+/.test(firstNumber) || /^-\d+/.test(secondNumber)) {
-        console.log("enter postive numbers only");
+        setError(true);
       } else {
         const res = await axios.post(
           "http://localhost:5000/api/v1/response/addition",
@@ -34,11 +34,11 @@ function Home() {
   };
 
   return (
-    <div className="grid  ">
+    <div className="grid relative ">
       <div className="h-[60px] bg-slate-200 flex ">
         <p className="font-bold ml-[100px] mt-2 text-[28px]">Step Addition</p>
       </div>
-      <div className="bg-white h-screen">
+      <div className="bg-white h-screen relative">
         {/* input */}
         <div className="ml-[400px] mt-[20px]">
           <div className="flex">
@@ -78,15 +78,40 @@ function Home() {
         </div>
         {/* response */}
 
-        <div className="border-2 border-dotted flex border-transparent rounded-sm mx-[400px] h-fit mt-1 bg-slate-200">
-          <div className="bg-black/80 h-[400px] my-6 min-w-[700px] overflow-y-auto scrollbar-y-auto rounded-sm mx-3">
-            
-            <p className="text-[27px] m-10 text-white">{JSON.stringify(result, null, 2)}</p>
-            
+        <div className="border-2 border-dotted flex border-transparent rounded-sm mx-[400px] transition-all duration-300 h-fit mt-1 bg-slate-200">
+          {error ? (
+            <div className="bg-slate-50 h-[400px] my-6 min-w-[700px] rounded-sm mx-3 ">
+              <p className="mt-10 ml-10">
+                {" "}
+                <span className="font-bold text-[40px] text-emerald-700">
+                  Keep in mind !!!{" "}
+                </span>
+                <br></br>{" "}
+                <span className="font-semibold text-[25px] text-red-500">
+                  {" "}
+                  Negative Numbers{" "}
+                </span>{" "}
+                and{" "}
+                <span className="text-[25px] text-red-500 font-semibold">
+                  Empty values
+                </span>{" "}
+                are <br></br>{" "}
+                <span className="text-[25px] text-red-500 font-semibold">
+                  {" "}
+                  Not Allowed...
+                </span>
+              </p>
+              <button  onClick={() => setError(false)} className="ml-[250px] mt-[20px] text-[20px] border-2 border-emerald-600 rounded-md px-5 py-1 hover:bg-emerald-400 hover:scale-105">OK</button>
             </div>
+          ) : (
+            <div className="bg-black/80 h-[400px] my-6 min-w-[700px] overflow-y-auto scrollbar-y-auto rounded-sm mx-3">
+              <p className="text-[27px] m-10 text-white">
+                {JSON.stringify(result, null, 2)}
+              </p>
+            </div>
+          )}
         </div>
       </div>
-      
     </div>
   );
 }

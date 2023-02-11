@@ -1,4 +1,9 @@
 
+- #### caution !!!
+    View  in full screen to get complete visual optimisation of this poject.
+
+
+
 # Project Overview:
 
 This whole project (Front-End & Back-End) follows the Model-View-Controller (MVC) architectural pattern. Project  aims to provide the result of addition between two numbers entered by the user. The front-end will check for the validity of the entered numbers, and in case the numbers are negative or not entered, it will throw an error without making an API call to improve user Experience. In case of two positive numbers, the front-end will display the result of the addition in the format described above.
@@ -58,7 +63,7 @@ npm start
 ## Packages Used :
 
  - [axios](https://www.npmjs.com/package/axios) to make API calls to the backend.
- - [react-router-dom](https://reactrouter.com/en/main) to be able to scale application if needed.
+ - [react-router-dom](https://reactrouter.com/en/main) to be able to scale application if needed and to include notFound page in this project.
  - [npm](https://www.npmjs.com/) for packages.
  - [TailwindCSS](https://tailwindcss.com/) for building UI for components 
  
@@ -103,4 +108,4 @@ npm start
 
 ### Backend Repository Link
 
-- Click here to [visit backend Repository ](https://github.com/safil-badarudeen/Eqaim-Technology_assignment-Backend) of this Project 
+- Click here to  [visit backend Repository ](https://github.com/safil-badarudeen/Eqaim-Technology_assignment-Backend) of this Project 
