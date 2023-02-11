@@ -8,7 +8,7 @@
 
 This whole project (Front-End & Back-End) follows the Model-View-Controller (MVC) architectural pattern. Project  aims to provide the result of addition between two numbers entered by the user. The front-end will check for the validity of the entered numbers, and in case the numbers are negative or not entered, it will throw an error without making an API call to improve user Experience. In case of two positive numbers, the front-end will display the result of the addition in the format described above.
 
-The project will be developed using React for the front-end and the result of the addition will be computed on the back-end. The back-end will use an Restful_API to receive the input numbers from the front-end and perform the necessary calculations. The result of the calculation will then be returned to the front-end in the desired format.
+The project will be developed using React for the front-end and the result of the addition will be computed on the back-end. The back-end will use an REST_API to receive the input numbers from the front-end and perform the necessary calculations. The result of the calculation will then be returned to the front-end in the desired format.
 
 This project will improve the user experience by providing real-time error checking on the front-end and reducing the number of API calls, thus improving the overall performance of the application. The result of the calculation will be displayed in a clear and concise manner, making it easy for users to understand.
 
