@@ -1,70 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview:
 
-## Available Scripts
+This project aims to provide the result of addition between two numbers entered by the user. The front-end will check for the validity of the entered numbers, and in case the numbers are negative or not entered, it will throw an error without making an API call to improve user Experience. In case of two positive numbers, the front-end will display the result of the addition in the format described above.
 
-In the project directory, you can run:
+The project will be developed using React for the front-end and the result of the addition will be computed on the back-end. The back-end will use an Restful_API to receive the input numbers from the front-end and perform the necessary calculations. The result of the calculation will then be returned to the front-end in the desired format.
 
-### `npm start`
+This project will improve the user experience by providing real-time error checking on the front-end and reducing the number of API calls, thus improving the overall performance of the application. The result of the calculation will be displayed in a clear and concise manner, making it easy for users to understand.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Input: 
+The user is required to input two numbers (NumberOne and NumberTwo) in the front end. The application will check if the input numbers are positive numbers or not. If the numbers are negative or not entered, the application will throw an error on the front-end itself and no API call will be made.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Output:
+The output of the application will be the sum of the two input numbers along with the carry string. The carry string represents the carry during the addition of two numbers.
 
-### `npm test`
+For example, if the input from the front-end body is NumberOne: 1489 and NumberTwo: 714, the response from the backend should be:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```console
+{
+  "step1": {
+    "carryString": "1",
+    "sumString: "3"
+  },
+  "step2": {
+    "carryString": "11",
+    "sumString: "03"
+  },
+  "step3": {
+    "carryString": "111",
+    "sumString: "203"
+  },
+  "step4": {
+    "carryString": "111",
+    "sumString: "2203"
+  }
+}
 
-### `npm run build`
+```
+## How to Run Locally:  
+- Fork this repository.
+- Clone the repository.
+```console
+git clone https://github.com/safil-badarudeen/Eqaim_Technology_assignment_Frontend.git
+```
+- Navigate to folder
+```console
+cd Eqaim_Technology_assignment_Frontend
+```
+- Install  dependency packages
+```console
+npm install
+```
+- Start the project
+```console
+npm start
+```
+## Packages Used :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - [axios](https://www.npmjs.com/package/axios) to make API calls to the backend
+ - [react-router-dom](https://reactrouter.com/en/main) to be able to scale application if needed
+ - [npm](https://www.npmjs.com/) for packages
+ 
